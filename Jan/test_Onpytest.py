@@ -4,6 +4,8 @@ import pytest
 @pytest.fixture
 def myfixture_setup():
     print("...........print info about fixture")
+    yield
+    print("logoff***********************")
 
 def test_one(myfixture_setup):
     print("testOne ... ")
