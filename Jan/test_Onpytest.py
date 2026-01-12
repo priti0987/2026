@@ -1,17 +1,11 @@
 import pytest
 
 
-@pytest.fixture
-def myfixture_setup():
-    print("...........print info about fixture")
-    yield
-    print("logoff***********************")
-
-def test_one(myfixture_setup):
+def test_one():
     print("testOne ... ")
 
 def test_two():
     print("testtwo... ")
 
-def test_three(myfixture_setup):
+def test_three(TC_setu):
     print("testthree ... ")
